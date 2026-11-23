@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ember Duel — a card duel of cinders and tides</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="table">
+  <header id="table-top">
+    <div id="enemy-panel" class="duelist-panel"></div>
+    <div id="table-title">EMBER DUEL</div>
+    <button id="mute-button" type="button">SOUND: ON [M]</button>
+  </header>
+
+  <div id="enemy-hand" class="hand enemy-hand" aria-label="The Warden's hand"></div>
+
+  <div id="center">
+    <div id="turn-banner"></div>
+    <div id="log" aria-live="polite"></div>
+    <div id="deck-count"></div>
+  </div>
+
+  <div id="player-hand" class="hand player-hand" aria-label="Your hand"></div>
+
+  <footer id="table-bottom">
+    <div id="player-panel" class="duelist-panel"></div>
+    <button id="end-turn" type="button">END TURN [E]</button>
+  </footer>
+
+  <div id="title-screen" class="screen">
+    <div class="screen-card">
+      <div class="logo-mark">◆ ▲ ● ■</div>
+      <h1>EMBER DUEL</h1>
+      <p class="tagline">A duel of cinders and tides — you against the Cinder Warden.</p>
+      <p class="rules">Thirty life each. Mana grows every turn. Play cards to strike, draw, block, or shatter the Warden's guard. First to zero life loses.</p>
+      <p class="suits-line"><span class="suit-chip flame">▲ Flame — damage</span><span class="suit-chip tide">● Tide — damage + draw</span><span class="suit-chip leaf">◆ Leaf — block</span><span class="suit-chip stone">■ Stone — damage + shatter</span></p>
+      <button id="start-button" type="button">BEGIN THE DUEL</button>
+      <p class="keys">Click a card to select it, click again or press Enter to play · 1–7 select · E ends your turn · R restarts</p>
+    </div>
+  </div>
+
+  <div id="over-screen" class="screen hidden">
+    <div class="screen-card">
+      <h1 id="over-title">VICTORY</h1>
+      <p id="over-text" class="tagline"></p>
+      <p id="over-stats" class="rules"></p>
+      <button id="again-button" type="button">PLAY AGAIN [R]</button>
+    </div>
+  </div>
+</div>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
